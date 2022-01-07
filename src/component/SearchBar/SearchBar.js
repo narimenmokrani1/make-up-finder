@@ -39,7 +39,7 @@ function SearchBar(props) {
 					
 
 					return (
-						<option key={index} value={option}>
+						<option key={index} value={option} className='option'>
 							{option}
 						</option>
 					);
