@@ -8,12 +8,12 @@ function App() {
 	return (
 		<div className='App'>
 			<header>
-        {/* <About/> */}
+        <About/>
       </header>
 			<main>
 				<h1>Want some glam? here you can find all the products you need</h1>
 			</main>
-      {/* <SearchBar/> */}
+      <SearchBar/>
 	  <MakeUpCard/>
 		</div>
 	);
