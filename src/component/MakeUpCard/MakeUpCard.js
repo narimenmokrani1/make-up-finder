@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import style from'./MakeUpCard.css'
 function MakeUpCard(props) {
 	const [makeup, setMakeup] = useState([]);
 	useEffect(() => {
@@ -14,16 +15,20 @@ function MakeUpCard(props) {
 				// const array = [...new Set(res.product_type)];
 			});
 	}, []);
+    if (!makeup) {
+        return <h1>still loading....</h1>
+    }
 	return (
-		<div className='card'>
+		<div>
 			{makeup.map((product) => {
 				return (
-					<div>
-						<h2>{product.brand}</h2>
+					<div key={product.id} className='card'>
+						<h1>Maybeline</h1>
 						<h3>{product.name}</h3>
-                        <img src={product.image_link} alt={product.name} />
-                        <h3>${product.price}</h3>
-                        <h4>{product.description}</h4>
+						<img src={product.image_link} alt={product.name} />
+						<h3>${product.price}</h3>
+                        <button>Select</button>
+						<h4>{product.description}</h4>
 					</div>
 				);
 			})}

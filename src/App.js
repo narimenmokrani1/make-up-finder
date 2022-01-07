@@ -11,7 +11,7 @@ function App() {
         <About/>
       </header>
 			<main>
-				<h1>Want some glam? here you can find all the products you need</h1>
+				<h1 class='h1'>Want some glam? here you can find all the products you need</h1>
 			</main>
       <SearchBar/>
 	  <MakeUpCard/>

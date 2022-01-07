@@ -33,7 +33,7 @@ function SearchBar(props) {
 		console.log('looking for products');
 	}
 	return (
-		<form className='searchBar-container'>
+		<form className='searchBar-container' type=''>
 			<select name='issueType' id='issueType'>
 				{noMakeup.map((option, index) => {
 					
