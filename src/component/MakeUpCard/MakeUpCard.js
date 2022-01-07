@@ -6,15 +6,17 @@ function MakeUpCard(props) {
 	const [makeup, setMakeup] = useState([]);
 	useEffect(() => {
 		const url =
-			'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
+			`https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline${props.userSelection && `&product_type=${props.userSelection}`}`;
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
 				console.log(res);
 				setMakeup(res);
 				// const array = [...new Set(res.product_type)];
+
 			});
-	}, []);
+	}, [props.userSelection]);
+
     if (!makeup) {
         return <h1>still loading....</h1>
     }

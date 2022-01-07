@@ -5,6 +5,9 @@ import { useState,  } from 'react';
 import SearchBar from './component/SearchBar/SearchBar';
 import MakeUpCard from './component/MakeUpCard/MakeUpCard';
 function App() {
+	const [userSelection, setUserSelection] = useState('')
+
+
 	return (
 		<div className='App'>
 			<header>
@@ -13,8 +16,10 @@ function App() {
 			<main>
 				<h1 class='h1'>Want some glam? here you can find all the products you need</h1>
 			</main>
-      <SearchBar/>
-	  <MakeUpCard/>
+      <SearchBar 
+	  setUserSelection={setUserSelection}
+	  />
+	  <MakeUpCard userSelection={userSelection}/>
 		</div>
 	);
 }

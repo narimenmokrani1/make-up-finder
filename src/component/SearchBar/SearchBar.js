@@ -33,8 +33,8 @@ function SearchBar(props) {
 		console.log('looking for products');
 	}
 	return (
-		<form className='searchBar-container' type=''>
-			<select name='issueType' id='issueType'>
+		<form className='searchBar-container'>
+			<select name='issueType' id='issueType' onChange={((event) => {props.setUserSelection(event.target.value)})}>
 				{noMakeup.map((option, index) => {
 					
 
