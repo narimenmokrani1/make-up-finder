@@ -1,33 +1,50 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import style from './SearchBar.css'
+import style from './SearchBar.css';
+
 function SearchBar(props) {
-	const [makeup, setMakeup] = useState([]);
+	const [makeup, setMakeup] = useState(null);
+	const [noMakeup, setNoMakeup] = useState([]);
+	useEffect(() => {
+		const url =
+			'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
+		fetch(url)
+			.then((res) => res.json())
+			.then((res) => {
+				console.log(res);
+				setMakeup(res);
+				// const array = [...new Set(res.product_type)];
+			});
+	}, []);
 
-	const url =
-		'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
-	fetch(url)
-		.then((res) => res.json())
-		.then((res) => {
-			
-
-			// console.log(res);
-			setMakeup(res);
-			
+	useEffect(() => {
+        if(!makeup) return;
+		const tempArray = makeup.map((item) => {
+			return item.product_type;
 		});
-function findProducts(event) {
-event.preventDefault()
-    console.log('looking for products')
-}
+
+		const newSet = [...new Set(tempArray)];
+		console.log(newSet);
+        setNoMakeup(newSet)
+	}, [makeup]);
+	function findProducts(event) {
+		event.preventDefault();
+		console.log('looking for products');
+	}
 	return (
 		<form className='searchBar-container'>
 			<select name='issueType' id='issueType'>
-				{makeup.map((option) => {
-                    if(option.product_type) {
+				{noMakeup.map((option, index) => {
+					
 
-                        return <option key={option.id} value={option.product_type}>{option.product_type}</option> ;
-                    }
+					return (
+						<option key={index} value={option}>
+							{option}
+						</option>
+					);
+
+					
 				})}
 			</select>
 			<button onClick={findProducts}>Search</button>
