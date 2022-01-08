@@ -1,7 +1,9 @@
 body {
-	/* background-image: url('./images/photo-1512207846876-bb54ef5056fe.jpeg'); */
+	background-image: url('./component/images/Lifter-Gloss-Slide-Desktop-VerA.jpeg');
 	background-color: rgb(245, 233, 242);
 	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh;
 }
 .App {
 	text-align: center;

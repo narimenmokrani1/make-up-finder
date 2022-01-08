@@ -1,11 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import Home from '../Home/Home';
 import style from './SearchBar.css';
 
 function SearchBar(props) {
 	const [makeup, setMakeup] = useState(null);
 	const [noMakeup, setNoMakeup] = useState([]);
+	const [productType, setProductType] = useState("")
 	useEffect(() => {
 		const url =
 			'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
@@ -19,36 +21,44 @@ function SearchBar(props) {
 	}, []);
 
 	useEffect(() => {
-        if(!makeup) return;
+		if (!makeup) return;
 		const tempArray = makeup.map((item) => {
 			return item.product_type;
 		});
 
 		const newSet = [...new Set(tempArray)];
 		console.log(newSet);
-        setNoMakeup(newSet)
+		setNoMakeup(newSet);
 	}, [makeup]);
 	function findProducts(event) {
 		event.preventDefault();
 		console.log('looking for products');
+		props.setUserSelection(productType)
 	}
 	return (
-		<form className='searchBar-container'>
-			<select name='issueType' id='issueType' onChange={((event) => {props.setUserSelection(event.target.value)})}>
-				{noMakeup.map((option, index) => {
-					
+		<div>
+			<form className='searchBar-container' onSubmit={findProducts}>
+				<select
+					name='issueType'
+					id='issueType'
+					onChange={(event) => {
+					setProductType(event.target.value)
+						// props.setUserSelection(event.target.value);
 
-					return (
-						<option key={index} value={option} className='option'>
-							{option}
-						</option>
-					);
+					}}>
+						<option value="" selected disabled>Select the product you are looking for</option>
+					{noMakeup.map((option, index) => {
+						return (
+							<option key={index} value={option} className='option'>
+								{option}
+							</option>
+						);
+					})}
+				</select>
 
-					
-				})}
-			</select>
-			<button onClick={findProducts}>Search</button>
-		</form>
+				<button>Search</button>
+			</form>
+		</div>
 	);
 }
 
