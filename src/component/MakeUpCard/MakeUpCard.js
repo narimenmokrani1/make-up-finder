@@ -38,7 +38,9 @@ function MakeUpCard(props) {
 						<h3>{product.name}</h3>
 						<img src={product.image_link} alt={product.name} />
 						<h3>${product.price}</h3>
-						<button onClick={() => showProductDetails(product.id)}>
+						<button
+							className='searchBar-button'
+							onClick={() => showProductDetails(product.id)}>
 							Select
 						</button>
 						{/* <h4>{product.description}</h4> */}

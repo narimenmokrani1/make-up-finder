@@ -1,0 +1,23 @@
+.productLink-button {
+	border: 1px solid black;
+	padding: 0.5em;
+	border-radius: 30px;
+	/* background-image: url('/src/component/images/rose1.png.png'); */
+	background-color: thistle;
+	font-size: medium;
+}
+button :hover {
+	background-color: white;
+	background-image: none;
+	/* background-image: url('/src//component/images/rose.png'); */
+}
+
+
+a {
+	text-decoration: none;
+	color: white;
+}
+a :hover {
+background-color: white;
+background-image: none;
+}

@@ -3,11 +3,11 @@
 	border: 1px solid black;
 	/* background-color: black; */
 	background-image: url('../images/Lifter-Gloss-Slide-Desktop-VerA.jpeg');
-	color: white;
+	color: rgb(0, 0, 0);
 	background-size: cover;
 	background-repeat: no-repeat;
-	
-	text-shadow: 2px 2px #ee72ba;
+
+	/* text-shadow: 1px 1px #000000; */
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
 		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -16,12 +16,4 @@ h1 {
 	color: white;
 	padding: 8px;
 	margin-top: 4%;
-	/* background: radial-gradient(
-		circle,
-		rgba(238, 174, 202, 1) 0%,
-		rgba(244, 210, 225, 1) 19%,
-		rgb(219, 202, 213) 49%,
-		rgba(241, 204, 239, 1) 76%,
-		rgba(230, 219, 230, 0.454) 100%
-	); */
 }

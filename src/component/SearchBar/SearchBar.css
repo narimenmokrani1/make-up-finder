@@ -1,4 +1,4 @@
-button {
+.searchBar-button {
 	display: inline-block;
 	padding: 1em 3em;
 	margin: 1em;
@@ -10,6 +10,7 @@ button {
 }
 
 select {
+	
 	padding: 1em 20em;
 	border-radius: 2em;
 	font-weight: 500;
@@ -19,5 +20,6 @@ select {
 }
 
 .searchBar-container {
-	margin-top: 20%
+	margin-top: 8%;
+	margin-bottom: 20%
 }

@@ -42,11 +42,12 @@ function SearchBar(props) {
 					name='issueType'
 					id='issueType'
 					onChange={(event) => {
-					setProductType(event.target.value)
+						setProductType(event.target.value);
 						// props.setUserSelection(event.target.value);
-
 					}}>
-						<option value=''selected disabled>Select the product you are looking for</option>
+					<option value='' selected disabled>
+						Select the product you are looking for
+					</option>
 					{noMakeup.map((option, index) => {
 						return (
 							<option key={index} value={option} className='option'>
@@ -56,7 +57,7 @@ function SearchBar(props) {
 					})}
 				</select>
 
-				<button>Search</button>
+				<button className='searchBar-button'>Search</button>
 			</form>
 		</div>
 	);
