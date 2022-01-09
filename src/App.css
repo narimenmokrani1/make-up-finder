@@ -1,5 +1,5 @@
 body {
-	background-image: url('./component/images/Lifter-Gloss-Slide-Desktop-VerA.jpeg');
+	background-image: url('./component/images/photo-1554755229-ca4470e07232.jpeg');
 	background-color: rgb(245, 233, 242);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -55,4 +55,27 @@ body {
 		rgba(241, 204, 239, 1) 76%,
 		rgba(238, 193, 238, 0.4542191876750701) 100%
 	);
+}
+
+.header {
+	text-decoration: none;
+	display: flex;
+	justify-content: flex-end;
+}
+.about,
+.home {
+	margin: 6px;
+	border: 1px solid black;
+	text-decoration: none;
+	color: white;
+	font-size: 1.7em;
+	background-color: pink;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-weight: 500;
+	border-radius: 10px;
+}
+
+.about :hover {
+	background-color: black;
 }

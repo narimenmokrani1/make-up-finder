@@ -2,9 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import style from './MakeUpCard.css';
+//https://reactrouter.com/docs/en/v6/api#usenavigate
 import { useNavigate } from 'react-router-dom';
 function MakeUpCard(props) {
 	const [makeup, setMakeup] = useState([]);
+	//https://reactrouter.com/docs/en/v6/api#usenavigate
 	const navigate = useNavigate();
 	useEffect(() => {
 		if (!props.userSelection) return;

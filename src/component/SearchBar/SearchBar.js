@@ -46,7 +46,7 @@ function SearchBar(props) {
 						// props.setUserSelection(event.target.value);
 
 					}}>
-						<option value="" selected disabled>Select the product you are looking for</option>
+						<option value=''selected disabled>Select the product you are looking for</option>
 					{noMakeup.map((option, index) => {
 						return (
 							<option key={index} value={option} className='option'>

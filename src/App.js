@@ -12,8 +12,10 @@ function App() {
 
 	return (
 		<div className='App'>
-			<header>
-				<Link to='/about'>About</Link>
+			<header className='header'>
+				<Link to='/about' className='about'>About</Link>
+
+				<Link to='/home' className='home'>Home</Link>
 			</header>
 			<main>
 				<h1 className='h1'>
@@ -30,8 +32,17 @@ function App() {
 						/>
 					}
 				/>
-				<Route path='/product/:id' element={<ProductDetails />}/>
-				<Route path='/about' element={<About/>}/>
+				<Route path='/product/:id' element={<ProductDetails />} />
+				<Route path='/about' element={<About />} />
+				<Route
+					path='/home'
+					element={
+						<Home
+							userSelection={userSelection}
+							setUserSelection={setUserSelection}
+						/>
+					}
+				/>
 			</Routes>
 		</div>
 	);

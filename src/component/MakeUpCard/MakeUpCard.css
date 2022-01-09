@@ -1,8 +1,12 @@
 .card {
 	margin: 40px;
 	border: 1px solid black;
-	background-image: url('../images/photo-1512207846876-bb54ef5056fe.jpeg');
+	/* background-color: black; */
+	background-image: url('../images/Lifter-Gloss-Slide-Desktop-VerA.jpeg');
 	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
 	text-shadow: 2px 2px #ee72ba;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
 		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
