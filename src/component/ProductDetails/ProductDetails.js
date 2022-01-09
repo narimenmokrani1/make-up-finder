@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
+// import { Link } from 'react-router-dom';
 function ProductDetails(props) {
 	const { id } = useParams();
 	const [product, setProduct] = useState({});
@@ -21,6 +22,7 @@ function ProductDetails(props) {
 				<h3>{product.name}</h3>
 				<img src={product.image_link} alt={product.name} />
 				<h3>${product.price}</h3>
+        <h3><a href={product.product_link}>Shop for product here</a></h3>
 				{/* <button>Select</button> */}
 				<h4>{product.description}</h4>
 			</div>
