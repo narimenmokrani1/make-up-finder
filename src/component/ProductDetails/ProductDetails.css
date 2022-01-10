@@ -6,18 +6,13 @@
 	background-color: thistle;
 	font-size: medium;
 }
-button :hover {
-	background-color: white;
-	background-image: none;
-	/* background-image: url('/src//component/images/rose.png'); */
-}
-
 
 a {
 	text-decoration: none;
 	color: white;
+	font-family: 'Luxurious Roman';
 }
-a :hover {
-background-color: white;
-background-image: none;
+
+h4 {
+	text-shadow: 1px 1px white;
 }

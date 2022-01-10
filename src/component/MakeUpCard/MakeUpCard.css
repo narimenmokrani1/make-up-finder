@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Luxurious+Roman&family=Poiret+One&family=Roboto:wght@100;300;400;700;900&display=swap');
 .card {
 	margin: 40px;
 	border: 1px solid black;
@@ -6,10 +8,12 @@
 	color: rgb(0, 0, 0);
 	background-size: cover;
 	background-repeat: no-repeat;
-
+	font-family: 'Luxurious Roman';
+	font-size: x-large;
+	
 	/* text-shadow: 1px 1px #000000; */
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	/* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
 h1 {
