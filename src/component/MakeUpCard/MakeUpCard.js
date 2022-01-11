@@ -15,7 +15,7 @@ function MakeUpCard(props) {
 		}${props.value[0] ? `&price_greater_than=${props.value[0]}` : ''}${
 			props.value[1] ? `&price_less_than=${props.value[1]}` : ''
 		}`;
-		console.log(url)
+		console.log(url);
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
