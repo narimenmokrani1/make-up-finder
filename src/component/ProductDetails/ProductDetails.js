@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import style from './ProductDetails.css';
-// import { Link } from 'react-router-dom';
 function ProductDetails(props) {
 	const { id } = useParams();
 	const [product, setProduct] = useState({});
@@ -27,7 +26,7 @@ function ProductDetails(props) {
 					Shop for product here
 				</a>
 
-				{/* <button>Select</button> */}
+			
 				<h4>{product.description}</h4>
 			</div>
 		</div>

@@ -15,13 +15,12 @@ function MakeUpCard(props) {
 		}${props.value[0] ? `&price_greater_than=${props.value[0]}` : ''}${
 			props.value[1] ? `&price_less_than=${props.value[1]}` : ''
 		}`;
-		console.log(url);
+		
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
 				console.log(res);
 				setMakeup(res);
-				// const array = [...new Set(res.product_type)];
 			});
 	}, [props.userSelection, props.value]);
 
@@ -46,7 +45,6 @@ function MakeUpCard(props) {
 							onClick={() => showProductDetails(product.id)}>
 							Select
 						</button>
-						{/* <h4>{product.description}</h4> */}
 					</div>
 				);
 			})}

@@ -111,3 +111,10 @@ body {
 .about :hover {
 	background-color: black;
 }
+
+.slider {
+	font-size: xx-large;
+	margin: 'auto';
+	display: 'block';
+	width: 'fit-content';
+}
