@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import style from './MakeUpCard.css';
 //https://reactrouter.com/docs/en/v6/api#usenavigate
 import { useNavigate } from 'react-router-dom';
+///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
 function MakeUpCard(props) {
 	const [makeup, setMakeup] = useState([]);
 	//https://reactrouter.com/docs/en/v6/api#usenavigate
@@ -19,7 +21,6 @@ function MakeUpCard(props) {
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
-				console.log(res);
 				setMakeup(res);
 			});
 	}, [props.userSelection, props.value]);

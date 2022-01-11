@@ -21,7 +21,8 @@ so if you are looking looking for a less than $9 bronze, just select bronze and 
 ![details](./src/component/images/details.png)
 
 ## Wire Frames
-![](./../src/component/images/../../../make-up-finder/src/component/images/wireframe.png)
+
+![wireframe](./../src/component/images/../../../make-up-finder/src/component/images/wireframe.png)
 
 
 ## Installation 
