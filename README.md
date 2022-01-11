@@ -47,7 +47,7 @@ so if you are looking looking for a less than $9 bronze, just select bronze and 
 ### Stretch Goals
 - As a user, I want to be able to add the products I want to a cart
 -  As a user, I want to be able to save the product i want somewhere so i can access them when i want
-
+- As a user, I should be able to give a stars rating
 ## References used 
 
 - [Unsplash](https://unsplash.com/)
