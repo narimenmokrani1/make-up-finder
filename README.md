@@ -23,7 +23,7 @@ so if you are looking looking for a less than $9 bronze, just select bronze and 
 ## Wire Frames
 
 ![wire}](./src/component/images/ppp.png)
-![wireframe](./../src/component/images/../../../make-up-finder/src/component/images/wireframe.png)
+![wireframe](./src/component/images/wire.png)
 
 ## Installation 
 1 - Fork and clone down the repository to your machine.
