@@ -2,20 +2,24 @@ import logo from './logo.svg';
 import './App.css';
 import About from './component/About/About';
 import { useState } from 'react';
-import SearchBar from './component/SearchBar/SearchBar';
 import MakeUpCard from './component/MakeUpCard/MakeUpCard';
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './component/Home/Home';
 import ProductDetails from './component/ProductDetails/ProductDetails';
+
 function App() {
 	const [userSelection, setUserSelection] = useState('');
-
+	 const [value, setValue] = useState([2, 50]);
 	return (
 		<div className='App'>
 			<header className='header'>
-				<Link to='/about' className='about'>About</Link>
+				<Link to='/about' className='about'>
+					About
+				</Link>
 
-				<Link to='/home' className='home'>Home</Link>
+				<Link to='/home' className='home'>
+					Home
+				</Link>
 			</header>
 			<main>
 				<h1 className='h1'>
@@ -40,6 +44,8 @@ function App() {
 						<Home
 							userSelection={userSelection}
 							setUserSelection={setUserSelection}
+							value={value}
+							setValue={setValue}
 						/>
 					}
 				/>

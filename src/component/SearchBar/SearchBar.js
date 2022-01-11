@@ -1,13 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import Home from '../Home/Home';
+import PriceFilter from '../PriceFilter/PriceFilter';
 import style from './SearchBar.css';
 
 function SearchBar(props) {
 	const [makeup, setMakeup] = useState(null);
 	const [noMakeup, setNoMakeup] = useState([]);
-	const [productType, setProductType] = useState("")
+	const [productType, setProductType] = useState('');
 	useEffect(() => {
 		const url =
 			'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
@@ -16,7 +16,6 @@ function SearchBar(props) {
 			.then((res) => {
 				console.log(res);
 				setMakeup(res);
-				// const array = [...new Set(res.product_type)];
 			});
 	}, []);
 
@@ -33,19 +32,20 @@ function SearchBar(props) {
 	function findProducts(event) {
 		event.preventDefault();
 		console.log('looking for products');
-		props.setUserSelection(productType)
+		props.setUserSelection(productType);
 	}
 	return (
 		<div>
 			<form className='searchBar-container' onSubmit={findProducts}>
+				<PriceFilter value={props.value} setValue={props.setValue} />
+
 				<select
 					name='issueType'
 					id='issueType'
 					onChange={(event) => {
 						setProductType(event.target.value);
-						// props.setUserSelection(event.target.value);
 					}}>
-					<option value='' selected disabled>
+					<option value='' disabled>
 						Select the product you are looking for
 					</option>
 					{noMakeup.map((option, index) => {

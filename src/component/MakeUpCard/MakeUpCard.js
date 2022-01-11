@@ -12,7 +12,10 @@ function MakeUpCard(props) {
 		if (!props.userSelection) return;
 		const url = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline${
 			props.userSelection && `&product_type=${props.userSelection}`
+		}${props.value[0] ? `&price_greater_than=${props.value[0]}` : ''}${
+			props.value[1] ? `&price_less_than=${props.value[1]}` : ''
 		}`;
+		console.log(url)
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
@@ -20,7 +23,7 @@ function MakeUpCard(props) {
 				setMakeup(res);
 				// const array = [...new Set(res.product_type)];
 			});
-	}, [props.userSelection]);
+	}, [props.userSelection, props.value]);
 
 	const showProductDetails = (productId) => {
 		navigate(`/product/${productId}`);
