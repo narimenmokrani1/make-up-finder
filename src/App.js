@@ -21,10 +21,9 @@ function App() {
 					Home
 				</Link>
 			</header>
-			<main>
-				<h1 className='h1'>
-					Want some glam? here you can find all the products you need
-				</h1>
+			<main className='hall'>
+				<h1 className="main-header">Maybeline Make-up Finder</h1>
+				<h2 className='h1'>Want some glam? here you can find all the products you need</h2>
 			</main>
 			<Routes>
 				<Route

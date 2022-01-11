@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './About.css'
+import style from './About.css';
 // import { useState } from 'react';
 function About(props) {
 	// const [isShow, setIsShow] = useState(false);
@@ -16,22 +16,11 @@ function About(props) {
 		// 	</p> : null}
 		// </div>
 		<p>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum quia
-			voluptatum nemo neque dolores quibusdam rem quae sunt, error autem
-			reiciendis nam, fuga corrupti cumque assumenda ex blanditiis consectetur
-			beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-			recusandae eveniet dolorem officia earum, accusamus modi quisquam sed
-			perferendis quis inventore nam illo asperiores et quae, nobis quibusdam
-			error? Voluptatibus? Lorem ipsum dolor, sit amet consectetur adipisicing
-			elit. Sapiente ipsam repellat provident, ratione repellendus quas saepe
-			eum quo ad, consectetur est veritatis laboriosam perferendis quam maxime
-			dolor, labore commodi quidem. Lorem ipsum dolor sit, amet consectetur
-			adipisicing elit. Doloremque est quidem reprehenderit ratione? Non est
-			asperiores incidunt dolore eos sint? Odit voluptatem culpa, voluptas
-			tempore non obcaecati impedit repudiandae corrupti. Lorem ipsum dolor sit
-			amet consectetur adipisicing elit. Repudiandae cupiditate neque saepe
-			repellendus esse dolor numquam a ipsum quaerat sit itaque odit repellat,
-			reprehenderit laudantium maiores magni! Neque, in harum.
+			Maybeline make-up finder is a site where you can find the products you
+			need with their prices. you can filter the price range you want. so if you
+			are looking looking for a less than $9 bronze, just select bronze and
+			flter a less than $9 price. and we'll display all the products that will
+			probably be available in the market
 		</p>
 	);
 }
