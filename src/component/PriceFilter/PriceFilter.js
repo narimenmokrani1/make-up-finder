@@ -16,11 +16,13 @@ function PriceFilter(props) {
 				display: 'block',
 				width: 'fit-content',
 			}}>
-			{/* <Typography id="range-slider" gutterBottom>
-        Select Price Range:
-      </Typography> */}
-			<Slider value={value} onChange={rangeSelector} valueLabelDisplay='auto' />
-			Price Ranges between {value[0]} and {value[1]}
+			<Slider
+				value={value}
+				onChange={rangeSelector}
+				valueLabelDisplay='auto'
+				className='slider'
+			/>
+			Price Ranges between ${value[0]} and ${value[1]}
 		</div>
 	);
 }

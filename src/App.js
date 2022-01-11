@@ -1,15 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 import About from './component/About/About';
 import { useState } from 'react';
-import MakeUpCard from './component/MakeUpCard/MakeUpCard';
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './component/Home/Home';
 import ProductDetails from './component/ProductDetails/ProductDetails';
 
 function App() {
 	const [userSelection, setUserSelection] = useState('');
-	 const [value, setValue] = useState([2, 50]);
+	const [value, setValue] = useState([2, 50]);
 	return (
 		<div className='App'>
 			<header className='header'>
@@ -21,10 +19,11 @@ function App() {
 					Home
 				</Link>
 			</header>
-			<main>
-				<h1 className='h1'>
-					Want some glam? here you can find all the products you need
-				</h1>
+			<main className='hall'>
+				<h1 className='main-header'>Maybeline Make-up Finder</h1>
+				<h2 className='h1'>
+					Want some glam? here you can find all the products you need !
+				</h2>
 			</main>
 			<Routes>
 				<Route
