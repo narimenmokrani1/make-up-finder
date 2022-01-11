@@ -10,7 +10,6 @@ function ProductDetails(props) {
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
-				console.log('Single product:', res);
 				setProduct(res);
 			});
 	}, []);
@@ -26,7 +25,6 @@ function ProductDetails(props) {
 					Shop for product here
 				</a>
 
-			
 				<h4>{product.description}</h4>
 			</div>
 		</div>

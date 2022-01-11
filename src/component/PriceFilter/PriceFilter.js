@@ -1,13 +1,11 @@
-import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
-import { useState } from 'react';
 import React from 'react';
 //https://www.geeksforgeeks.org/how-to-create-price-range-selector-in-reactjs/
 function PriceFilter(props) {
 	const { value, setValue } = props;
 	const rangeSelector = (event, newValue) => {
 		setValue(newValue);
-		console.log(newValue);
+		
 	};
 	return (
 		<div
