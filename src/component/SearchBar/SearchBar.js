@@ -20,7 +20,7 @@ function SearchBar(props) {
 	}, []);
 
 	useEffect(() => {
-		if (!makeup) return;
+		if (!makeup) return ;
 		const tempArray = makeup.map((item) => {
 			return item.product_type;
 		});
@@ -45,9 +45,6 @@ function SearchBar(props) {
 					onChange={(event) => {
 						setProductType(event.target.value);
 					}}>
-					<option value='' disabled>
-						Select the product you are looking for
-					</option>
 					{noMakeup.map((option, index) => {
 						return (
 							<option key={index} value={option} className='option'>
