@@ -33,6 +33,8 @@ function App() {
 						<Home
 							userSelection={userSelection}
 							setUserSelection={setUserSelection}
+							value={value}
+							setValue={setValue}
 						/>
 					}
 				/>
